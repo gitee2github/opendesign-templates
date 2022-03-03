@@ -3,7 +3,7 @@
 ## Templates
 
 Project | description | others
-:-: | :-: | :-: 
+:- | :- | :-
 vue3-ts-starter | `vue3`+`ts`project template | `vue3`+`ts` 
 
 #### Contribution
