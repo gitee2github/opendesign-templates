@@ -16,6 +16,12 @@
       "@demo/*": ["packages/demo/src/*"],
     }
   },
-  "include": ["packages/**/*.ts", "packages/**/*.d.ts", "packages/**/*.tsx", "packages/**/*.vue"],
+  "include": [
+    "packages/*/src/**/*.ts", 
+    "packages/*/src/**/*.ts", 
+    "packages/*/src/**/*.d.ts", 
+    "packages/*/src/**/*.tsx", 
+    "packages/*/src/**/*.vue"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
