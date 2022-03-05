@@ -6,6 +6,42 @@ vue3多页面应用模板, 使用vite构建，并集成Scss + Vue Router + Pinia
 ### 软件架构
 Vue 3 + TypeScript + Vite + Scss + Vue Router + Pinia + Axios
 
+
+### 使用说明
+1. 在packages目录下新增子页面目录
+2. 在vite.config.ts中增加子页面配置
+```
+// vite.conifg.ts
+export default defineConfig({
+  ...
+  build: {
+    rollupOptions: {
+      input: {
+        demo: './packages/demo/index.html', // 新增子页面
+      },
+    },
+    ...
+  },
+  resolve: {
+    alias: {
+      ...
+      '@demo/': `${path.resolve(__dirname, './packages/demo/src')}/`, // 配置路径别名，方便快速引入项目文件
+    },
+  },
+  ...
+}
+```
+```
+// tsconfig.json
+{
+    ...
+    "paths": {
+      "@demo/*": ["packages/demo/src/*"], // 增加编码时的路径提示
+    }
+    ...
+}
+```
+
 ### 安装教程
 1. 推荐使用[pnpm](https://pnpm.io/installation)安装，当前你也可以使用npm、yarn
 2. 安装依赖 ```pnpm install```
