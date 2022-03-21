@@ -1,5 +1,5 @@
 {
-  "name": "vue3-starter",
+  "name": "vue3-ts-mpa-starter",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -27,7 +27,6 @@
     "sass": "^1.49.9",
     "typescript": "^4.5.4",
     "vite": "^2.8.0",
-    "vite-plugin-svg-icons": "^2.0.1",
     "vue-tsc": "^0.29.8"
   }
 }
