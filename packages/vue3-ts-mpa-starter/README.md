@@ -46,6 +46,7 @@ export default defineConfig({
 1. 推荐使用[pnpm](https://pnpm.io/installation)安装，当前你也可以使用npm、yarn
 2. 安装依赖 ```pnpm install```
 3. 运行项目 ```pnpm dev```
+4. 访问页面 ```http://localhost:3000/demo/```
 
 
 ### 风格命名
