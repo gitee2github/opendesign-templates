@@ -6,6 +6,7 @@ Project | description | others
 :- | :- | :-
 vue3-ts-starter | `vue3`+`ts` SPA project template | `vue3`+`ts` SPA
 vue3-ts-mpa-starter | `vue3`+`ts` MPA project template | `vue3`+`ts` MPA
+vue3-ts-monorepo-starter | `vue3`+`ts` monorepo template | `vue3`+`ts` Monorepo
 
 #### Contribution
 

@@ -1,52 +1,34 @@
 # vue3-ts-mpa-starter
 
 ### 介绍
-vue3多页面应用模板, 使用vite构建，并集成Scss + Vue Router + Pinia + Axios
+vue3多项目模板, 使用pnpm管理monorepo，并集成Scss + Vue Router + Pinia + Axios
 
 ### 软件架构
 Vue 3 + TypeScript + Vite + Scss + Vue Router + Pinia + Axios
 
 
 ### 使用说明
-1. 在packages目录下新增子页面目录
-2. 在vite.config.ts中增加子页面配置
+#### 如何新增项目？
+1. 在packages目录下新增子项目目录
+2. 在package.json中增加子项目相关命令配置
 ```
-// vite.conifg.ts
-export default defineConfig({
-  ...
-  build: {
-    rollupOptions: {
-      input: {
-        demo: './packages/demo/index.html', // 新增子页面
-      },
-    },
-    ...
-  },
-  resolve: {
-    alias: {
-      ...
-      '@demo/': `${path.resolve(__dirname, './packages/demo/src')}/`, // 配置路径别名，方便快速引入项目文件
-    },
-  },
-  ...
-}
-```
-```
-// tsconfig.json
+// package.json
 {
-    ...
-    "paths": {
-      "@demo/*": ["packages/demo/src/*"], // 增加编码时的路径提示
-    }
-    ...
+  ...
+  "scripts": {
+    "dev:demo2": "pnpm dev --filter demo2",
+    "build:demo2": "pnpm build --filter demo1",
+    "build": "pnpm build:demo1 && pnpm build:demo2" // 
+  },
+  ...
 }
 ```
 
 ### 安装教程
-1. 推荐使用[pnpm](https://pnpm.io/installation)安装，当前你也可以使用npm、yarn
+1. 使用[pnpm](https://www.pnpm.cn/installation)安装
 2. 安装依赖 ```pnpm install```
-3. 运行项目 ```pnpm dev```
-4. 访问页面 ```http://localhost:3000/demo/```
+3. 运行指定项目（demo1） ```pnpm dev:demo1```
+4. 访问页面 ```http://localhost:3000/demo1/```
 
 
 ### 风格命名
@@ -55,7 +37,7 @@ export default defineConfig({
 
 ### 目录说明
 ```
-|-- packages // 多页面目录
+|-- packages // 多项目目录
   |-- shared 公共模块项目
     |-- plugins 插件
       |-- axios axios封装
@@ -63,7 +45,7 @@ export default defineConfig({
     |-- svg-icons  svg图标库
     |-- utils 工具库
 
-  |-- demo demo单页面
+  |-- demo demo项目
 
     --- index.html 入口html
     
@@ -71,7 +53,6 @@ export default defineConfig({
         |-- api API接口
 
         |-- assets 资源目录，如图片、视频等
-            |-- svg-icons  svg 雪碧图图标
 
         |-- components 跨页面公共组件
 
@@ -80,8 +61,6 @@ export default defineConfig({
             |-- course-detail 子页面
 
         |-- shared 公共工具及文件
-            |-- axios axios封装
-            |-- styles 公共样式
 
         |-- stores 全局状态管理
 

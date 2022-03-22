@@ -6,6 +6,7 @@
 :- | :- | :-
 vue3-ts-starter | `vue3`+`ts` 单页面项目模板 | `vue3`+`ts` SPA
 vue3-ts-mpa-starter | `vue3`+`ts` 多页面项目模板 | `vue3`+`ts` MPA
+vue3-ts-monorepo-starter | `vue3`+`ts` 多项目模板 | `vue3`+`ts` Monorepo
 
 ## 参与贡献
 
