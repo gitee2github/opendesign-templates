@@ -1,53 +1,10 @@
-# vue3-ts-mpa-starter
+# demo
 
 ### 介绍
-vue3多页面应用模板, 使用vite构建，并集成Scss + Vue Router + Pinia + Axios
+vue3模板库, 使用vite构建，并集成Scss + Vue Router + Pinia + Axios
 
 ### 软件架构
 Vue 3 + TypeScript + Vite + Scss + Vue Router + Pinia + Axios
-
-
-### 使用说明
-1. 在packages目录下新增子页面目录
-2. 在vite.config.ts中增加子页面配置
-```
-// vite.conifg.ts
-export default defineConfig({
-  ...
-  build: {
-    rollupOptions: {
-      input: {
-        demo: './packages/demo/index.html', // 新增子页面
-      },
-    },
-    ...
-  },
-  resolve: {
-    alias: {
-      ...
-      '@/': `${path.resolve(__dirname, './packages/demo/src')}/`, // 配置路径别名，方便快速引入项目文件
-    },
-  },
-  ...
-}
-```
-```
-// tsconfig.json
-{
-    ...
-    "paths": {
-      "@/*": ["packages/demo/src/*"], // 增加编码时的路径提示
-    }
-    ...
-}
-```
-
-### 安装教程
-1. 推荐使用[pnpm](https://pnpm.io/installation)安装，当前你也可以使用npm、yarn
-2. 安装依赖 ```pnpm install```
-3. 运行项目 ```pnpm dev```
-4. 访问页面 ```http://localhost:3000/demo/```
-
 
 ### 风格命名
 1. 文件夹名称建议使用kebab-case, 如： hello-world
@@ -55,33 +12,24 @@ export default defineConfig({
 
 ### 目录说明
 ```
-|-- packages // 多页面目录
-  |-- shared 跨页面公共模块
+|-- src
 
-  |-- demo 单页面示例
+  |-- api API接口
 
-    --- index.html 入口html
-    
-    |-- src 
-        |-- api API接口
+  |-- assets 资源目录，如图片、视频等
 
-        |-- assets 资源目录，如图片、视频等
-            |-- svg-icons  svg 雪碧图图标
+  |-- components 跨页面公共组件
 
-        |-- components 跨页面公共组件
+  |-- pages 项目页面
+      |-- course 页面
+      |-- course-detail 子页面
 
-        |-- pages 项目页面
-            |-- course 页面
-            |-- course-detail 子页面
+  |-- shared 公共工具及文件
 
-        |-- shared 公共工具及文件
-            |-- axios axios封装
-            |-- styles 公共样式
+  |-- stores 全局状态管理
 
-        |-- stores 全局状态管理
-
-        --- main.ts 入口文件
-        --- router.ts 路由文件
+  --- main.ts 入口文件
+  --- router.ts 路由文件
 ```
 
 ### 参与贡献

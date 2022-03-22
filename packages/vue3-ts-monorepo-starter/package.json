@@ -5,7 +5,8 @@
   "scripts": {
     "dev:demo1": "pnpm dev --filter demo1",
     "dev:demo2": "pnpm dev --filter demo2",
-    "build": "vue-tsc --noEmit && vite build"
+    "build:demo1": "pnpm build --filter demo1",
+    "build": "pnpm build:demo1"
   },
   "dependencies": {
     "axios": "^0.26.0",

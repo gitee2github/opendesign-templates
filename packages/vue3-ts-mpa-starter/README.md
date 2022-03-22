@@ -56,9 +56,14 @@ export default defineConfig({
 ### 目录说明
 ```
 |-- packages // 多页面目录
-  |-- shared 跨页面公共模块
+  |-- shared 公共模块项目
+    |-- plugins 插件
+      |-- axios axios封装
+    |-- styles 公共样式
+    |-- svg-icons  svg图标库
+    |-- utils 工具库
 
-  |-- demo 单页面示例
+  |-- demo demo单页面
 
     --- index.html 入口html
     
