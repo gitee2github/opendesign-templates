@@ -6,6 +6,7 @@ import Icons from 'unplugin-icons/vite';
 import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 
 export default defineConfig({
+  base: '/templates/',
   build: {
     outDir: path.resolve(__dirname, '../dist'),
     cssCodeSplit: true,
