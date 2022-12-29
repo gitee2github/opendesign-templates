@@ -1,7 +1,7 @@
 import type { UserConfig } from 'vitepress';
 
 const config: UserConfig = {
-  base: '/',
+  base: '/templates/',
   head: [
     [
       'link',
