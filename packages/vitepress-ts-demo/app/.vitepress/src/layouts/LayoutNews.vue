@@ -8,7 +8,7 @@ const { frontmatter, lang } = useData();
 const i18n = useI18n();
 
 const newsInfo = {
-  link: '/zh/',
+  link: '/templates/zh/news/',
   name: '新闻',
 };
 

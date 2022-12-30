@@ -16,7 +16,7 @@ const logo = computed(() =>
 
 // 返回首页
 const goHome = () => {
-  router.go(`/${lang.value}/`);
+  window.open('http://www.openeuler.org', '_blank');
 };
 </script>
 
