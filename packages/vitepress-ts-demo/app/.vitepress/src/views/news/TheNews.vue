@@ -7,7 +7,7 @@ import { useRouter } from 'vitepress';
 
 const router = useRouter();
 const handleNewsClick = () => {
-  router.go('/zh/news/20220831');
+  router.go('/templates/zh/news/20220831');
 };
 </script>
 
